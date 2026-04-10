@@ -3,8 +3,16 @@
 
 <!-- Social badges -->
 <p align="center">
+  <img src="https://img.shields.io/badge/University%20at%20Buffalo-MS%20Computer%20Science-005BBB?style=for-the-badge&logo=academia&logoColor=white" />
+</p>
+
+<p align="center">
   <a href="https://venkatamanideep.com" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-venkatamanideep.com-0F172A?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+  &nbsp;
+  <a href="mailto:venkatamanideep20@gmail.com">
+    <img src="https://img.shields.io/badge/Email-venkatamanideep20@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
   &nbsp;
   <a href="https://linkedin.com/in/manideep-analytics" target="_blank">
@@ -30,7 +38,7 @@
 
 <p align="center">
   I work at the intersection of <strong>LLM evaluation</strong>, <strong>agent systems</strong>, and <strong>statistically rigorous AI</strong><br/>
-  MS Computer Science @ University at Buffalo &nbsp;·&nbsp; Data Science foundation
+  Data Science is my foundation — statistical rigor is the differentiator.
 </p>
 
 <br/>
