@@ -1,82 +1,167 @@
-<h1 align="center">Venkata Manideep Patibandla</h1>
+<!-- Header banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:3B82F6,100:06B6D4&height=200&section=header&text=Venkata%20Manideep%20Patibandla&fontSize=36&fontColor=FFFFFF&fontAlignY=38&desc=LLM%20Evaluation%20%C2%B7%20Agent%20Systems%20%C2%B7%20Production%20ML%20Engineering&descSize=16&descAlignY=58&animation=fadeIn" width="100%" />
+
+<!-- Social badges -->
+<p align="center">
+  <a href="https://venkatamanideep.com">
+    <img src="https://img.shields.io/badge/Portfolio-venkatamanideep.com-0F172A?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+  &nbsp;
+  <a href="https://linkedin.com/in/manideep-analytics">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  &nbsp;
+  <a href="https://patibandlavenkatamanideep.github.io/RealDataAgentBench/">
+    <img src="https://img.shields.io/badge/Live%20Leaderboard-RDAB-22C55E?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  &nbsp;
+  <img src="https://komarev.com/ghpvc/?username=patibandlavenkatamanideep&style=for-the-badge&color=3B82F6&label=PROFILE+VIEWS" />
+</p>
+
+<br/>
+
+<!-- About -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0F172A&height=3&section=header" width="100%" />
+
+<h2 align="center">⚡ What I Build</h2>
 
 <p align="center">
-  <strong>LLM Evaluation · Agent Systems · Production ML Engineering</strong>
+  <em>Most benchmarks ask: "did the model get the right answer?"</em><br/>
+  <em>I care about: "did it reason correctly, use appropriate methods, and report uncertainty?"</em><br/>
+  <strong>Those are different questions. They have different answers.</strong>
 </p>
 
 <p align="center">
-  MS Computer Science @ University at Buffalo
-  &nbsp;·&nbsp;
-  <a href="https://venkatamanideep.com">venkatamanideep.com</a>
-  &nbsp;·&nbsp;
-  <a href="https://linkedin.com/in/manideep-analytics">LinkedIn</a>
+  I work at the intersection of <strong>LLM evaluation</strong>, <strong>agent systems</strong>, and <strong>statistically rigorous AI</strong> —<br/>
+  MS Computer Science @ University at Buffalo &nbsp;·&nbsp; Data Science is my foundation
 </p>
 
----
-
-## What I build
-
-I work at the intersection of **LLM evaluation**, **agent systems**, and **statistically rigorous AI** — the part of ML where getting the right answer isn't enough. The reasoning has to hold up too.
-
-Most benchmarks ask: *did the model output the correct number?*  
-I care about: *did it reason correctly, use appropriate methods, and report uncertainty?*  
-Those are different questions. They have different answers.
+<br/>
 
 ---
 
-## Featured project
+<!-- Featured Project -->
+## 🚀 Featured Project — RealDataAgentBench
 
-### [RealDataAgentBench](https://github.com/patibandlavenkatamanideep/RealDataAgentBench) &nbsp;·&nbsp; [Live Leaderboard ↗](https://patibandlavenkatamanideep.github.io/RealDataAgentBench/)
+<table>
+<tr>
+<td width="60%">
 
-An open-source benchmark for evaluating whether LLM agents can perform real-world data science workflows with statistical rigor.
+### [RealDataAgentBench (RDAB)](https://github.com/patibandlavenkatamanideep/RealDataAgentBench)
 
-| | |
-|---|---|
-| **Tasks** | 23 across EDA, feature engineering, modeling, inference, ML engineering |
-| **Models benchmarked** | 10 — GPT-5, GPT-4.1, Claude Opus/Sonnet/Haiku, Gemini 2.5, Grok, Llama, and more |
-| **Runs** | 163 with full cost tracking |
-| **Scoring** | 4 dimensions: correctness · code quality · efficiency · statistical validity |
+An open-source benchmark that evaluates whether LLM agents perform **statistically sound** data science — not just correct-looking output.
 
-**Key finding:** Every frontier model — including GPT-5 — scores ≤0.25 on statistical validity on tasks where it scores 0.83–1.00 on correctness. Correct output ≠ sound reasoning.
+| Metric | Value |
+|--------|-------|
+| 🧪 Tasks | 23 across 5 categories |
+| 🤖 Models | 10 frontier models benchmarked |
+| 📊 Runs | 163 with full cost tracking |
+| 📐 Scoring | Correctness · Code Quality · Efficiency · Stat Validity |
+
+**Key finding:** Every frontier model including GPT-5 scores ≤**0.25** on statistical validity on tasks where it scores **0.83–1.00** on correctness.
+
+> Correct output ≠ sound reasoning.
+
+</td>
+<td width="40%" align="center">
+
+<a href="https://patibandlavenkatamanideep.github.io/RealDataAgentBench/">
+  <img src="https://img.shields.io/badge/🔴%20LIVE%20LEADERBOARD-Open%20Now-22C55E?style=for-the-badge" />
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/patibandlavenkatamanideep/RealDataAgentBench">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=patibandlavenkatamanideep&repo=RealDataAgentBench&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=3B82F6&text_color=94A3B8&icon_color=06B6D4" />
+</a>
+
+</td>
+</tr>
+</table>
 
 ```bash
-# Try it in 60 seconds
+# Run it in 60 seconds
 git clone https://github.com/patibandlavenkatamanideep/RealDataAgentBench
-cd RealDataAgentBench && pip install -e ".[dev]"
+pip install -e ".[dev]"
 dab run eda_001 --model gpt-4.1 --budget 0.02
 dab score outputs/eda_001_*.json
+# → score breakdown · token usage · statistical validity gaps
 ```
 
 ---
 
-## Stack
+<!-- Tech Stack -->
+## 🛠️ Tech Stack
 
-**Languages** &nbsp; Python · TypeScript · SQL  
-**LLM / AI** &nbsp; Anthropic API · OpenAI API · Groq · LangChain · RAG pipelines  
-**ML** &nbsp; scikit-learn · XGBoost · LightGBM · PyTorch  
-**Infra** &nbsp; GitHub Actions · Docker · Streamlit · FastAPI  
-**Evaluation** &nbsp; Custom scoring engines · Statistical validity testing · Benchmark design
+<h4>Languages</h4>
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+</p>
+
+<h4>LLM / AI / GenAI</h4>
+<p>
+  <img src="https://img.shields.io/badge/Anthropic_Claude-0F172A?style=for-the-badge&logo=anthropic&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenAI_API-412991?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
+  <img src="https://img.shields.io/badge/RAG_Pipelines-06B6D4?style=for-the-badge&logo=databricks&logoColor=white" />
+  <img src="https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logoColor=white" />
+</p>
+
+<h4>ML / Data Science</h4>
+<p>
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" />
+  <img src="https://img.shields.io/badge/XGBoost-189AD3?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
+</p>
+
+<h4>Infrastructure & Tools</h4>
+<p>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+</p>
 
 ---
 
-## What I'm focused on
-
-- Building evaluation infrastructure that surfaces *how* models reason, not just *what* they output
-- Extending RDAB: 30+ tasks, human baselines, arXiv writeup
-- Roles in LLM evaluation, agent systems, and production AI infrastructure
-
----
+<!-- GitHub Stats -->
+## 📊 GitHub Stats
 
 <p align="center">
-  <a href="https://github.com/patibandlavenkatamanideep/RealDataAgentBench">
-    <img src="https://img.shields.io/badge/RealDataAgentBench-open--source-3B82F6?style=flat-square&logo=github" />
-  </a>
+  <img src="https://github-readme-stats.vercel.app/api?username=patibandlavenkatamanideep&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=3B82F6&text_color=94A3B8&icon_color=06B6D4&count_private=true" height="165" />
   &nbsp;
-  <a href="https://patibandlavenkatamanideep.github.io/RealDataAgentBench/">
-    <img src="https://img.shields.io/badge/leaderboard-live-22C55E?style=flat-square" />
-  </a>
-  &nbsp;
-  <a href="https://linkedin.com/in/manideep-analytics">
-    <img src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=flat-square&logo=linkedin" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=patibandlavenkatamanideep&layout=compact&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=3B82F6&text_color=94A3B8&langs_count=6" height="165" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=patibandlavenkatamanideep&theme=tokyonight&hide_border=true&background=0F172A&ring=3B82F6&fire=06B6D4&currStreakLabel=94A3B8" width="60%" />
+</p>
+
+---
+
+<!-- What I'm building -->
+## 🎯 Currently Building
+
+```
+▸ RealDataAgentBench  →  30+ tasks, human baselines, arXiv paper
+▸ LLM evaluation infrastructure  →  surfaces how models reason, not just what they output
+▸ Open to roles in  →  LLM evaluation · agent systems · production AI infrastructure
+```
+
+---
+
+<!-- Portfolio CTA -->
+<p align="center">
+  <a href="https://venkatamanideep.com">
+    <img src="https://img.shields.io/badge/View%20Full%20Portfolio%20%E2%86%97-venkatamanideep.com-3B82F6?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </p>
+
+<!-- Footer banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,50:3B82F6,100:0F172A&height=120&section=footer&animation=fadeIn" width="100%" />
