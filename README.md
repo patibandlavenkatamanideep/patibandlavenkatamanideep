@@ -3,24 +3,21 @@
 
 <!-- Social badges -->
 <p align="center">
-  <a href="https://venkatamanideep.com">
+  <a href="https://venkatamanideep.com" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-venkatamanideep.com-0F172A?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
   &nbsp;
-  <a href="https://linkedin.com/in/manideep-analytics">
+  <a href="https://linkedin.com/in/manideep-analytics" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
   &nbsp;
-  <a href="https://patibandlavenkatamanideep.github.io/RealDataAgentBench/">
+  <a href="https://patibandlavenkatamanideep.github.io/RealDataAgentBench/" target="_blank">
     <img src="https://img.shields.io/badge/Live%20Leaderboard-RDAB-22C55E?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=patibandlavenkatamanideep&style=for-the-badge&color=3B82F6&label=PROFILE+VIEWS" />
 </p>
 
 <br/>
 
-<!-- About -->
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0F172A&height=3&section=header" width="100%" />
 
 <h2 align="center">⚡ What I Build</h2>
@@ -32,29 +29,28 @@
 </p>
 
 <p align="center">
-  I work at the intersection of <strong>LLM evaluation</strong>, <strong>agent systems</strong>, and <strong>statistically rigorous AI</strong> —<br/>
-  MS Computer Science @ University at Buffalo &nbsp;·&nbsp; Data Science is my foundation
+  I work at the intersection of <strong>LLM evaluation</strong>, <strong>agent systems</strong>, and <strong>statistically rigorous AI</strong><br/>
+  MS Computer Science @ University at Buffalo &nbsp;·&nbsp; Data Science foundation
 </p>
 
 <br/>
 
 ---
 
-<!-- Featured Project -->
 ## 🚀 Featured Project — RealDataAgentBench
 
 <table>
 <tr>
-<td width="60%">
+<td width="58%">
 
 ### [RealDataAgentBench (RDAB)](https://github.com/patibandlavenkatamanideep/RealDataAgentBench)
 
 An open-source benchmark that evaluates whether LLM agents perform **statistically sound** data science — not just correct-looking output.
 
-| Metric | Value |
-|--------|-------|
+| | |
+|---|---|
 | 🧪 Tasks | 23 across 5 categories |
-| 🤖 Models | 10 frontier models benchmarked |
+| 🤖 Models | 10 frontier models — GPT-5, Claude, Gemini, Llama, Grok |
 | 📊 Runs | 163 with full cost tracking |
 | 📐 Scoring | Correctness · Code Quality · Efficiency · Stat Validity |
 
@@ -63,15 +59,15 @@ An open-source benchmark that evaluates whether LLM agents perform **statistical
 > Correct output ≠ sound reasoning.
 
 </td>
-<td width="40%" align="center">
+<td width="42%" align="center">
 
-<a href="https://patibandlavenkatamanideep.github.io/RealDataAgentBench/">
-  <img src="https://img.shields.io/badge/🔴%20LIVE%20LEADERBOARD-Open%20Now-22C55E?style=for-the-badge" />
+<a href="https://patibandlavenkatamanideep.github.io/RealDataAgentBench/" target="_blank">
+  <img src="https://img.shields.io/badge/%F0%9F%9F%A2%20LIVE%20LEADERBOARD-Open%20Now-22C55E?style=for-the-badge" />
 </a>
 
 <br/><br/>
 
-<a href="https://github.com/patibandlavenkatamanideep/RealDataAgentBench">
+<a href="https://github.com/patibandlavenkatamanideep/RealDataAgentBench" target="_blank">
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=patibandlavenkatamanideep&repo=RealDataAgentBench&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=3B82F6&text_color=94A3B8&icon_color=06B6D4" />
 </a>
 
@@ -80,7 +76,7 @@ An open-source benchmark that evaluates whether LLM agents perform **statistical
 </table>
 
 ```bash
-# Run it in 60 seconds
+# Run in 60 seconds
 git clone https://github.com/patibandlavenkatamanideep/RealDataAgentBench
 pip install -e ".[dev]"
 dab run eda_001 --model gpt-4.1 --budget 0.02
@@ -90,7 +86,6 @@ dab score outputs/eda_001_*.json
 
 ---
 
-<!-- Tech Stack -->
 ## 🛠️ Tech Stack
 
 <h4>Languages</h4>
@@ -130,35 +125,18 @@ dab score outputs/eda_001_*.json
 
 ---
 
-<!-- GitHub Stats -->
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=patibandlavenkatamanideep&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=3B82F6&text_color=94A3B8&icon_color=06B6D4&count_private=true" height="165" />
-  &nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=patibandlavenkatamanideep&layout=compact&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=3B82F6&text_color=94A3B8&langs_count=6" height="165" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=patibandlavenkatamanideep&theme=tokyonight&hide_border=true&background=0F172A&ring=3B82F6&fire=06B6D4&currStreakLabel=94A3B8" width="60%" />
-</p>
-
----
-
-<!-- What I'm building -->
 ## 🎯 Currently Building
 
 ```
 ▸ RealDataAgentBench  →  30+ tasks, human baselines, arXiv paper
-▸ LLM evaluation infrastructure  →  surfaces how models reason, not just what they output
+▸ LLM evaluation infra  →  surfaces how models reason, not just what they output
 ▸ Open to roles in  →  LLM evaluation · agent systems · production AI infrastructure
 ```
 
 ---
 
-<!-- Portfolio CTA -->
 <p align="center">
-  <a href="https://venkatamanideep.com">
+  <a href="https://venkatamanideep.com" target="_blank">
     <img src="https://img.shields.io/badge/View%20Full%20Portfolio%20%E2%86%97-venkatamanideep.com-3B82F6?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </p>
