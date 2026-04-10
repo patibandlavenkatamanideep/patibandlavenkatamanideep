@@ -3,7 +3,7 @@
 
 <!-- Social badges -->
 <p align="center">
-  <img src="https://img.shields.io/badge/University%20at%20Buffalo-MS%20Computer%20Science-005BBB?style=for-the-badge&logo=academia&logoColor=white" />
+  <img src="https://img.shields.io/badge/Sacred%20Heart%20University-MS%20Computer%20Science-CC0000?style=for-the-badge&logo=academia&logoColor=white" />
 </p>
 
 <p align="center">
