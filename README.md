@@ -94,7 +94,7 @@ dab score outputs/eda_001_*.json
 
 ---
 
-## 🛡️ Production Project — CostGuard
+## 🛡️ Open-Source Project — CostGuard
 
 <table>
 <tr>
@@ -102,7 +102,7 @@ dab score outputs/eda_001_*.json
 
 ### [CostGuard](https://github.com/patibandlavenkatamanideep/CostGuard)
 
-A **production-grade LLM reliability proxy** that sits between your agent and any provider. Every call is validity-scored, cost-tracked, circuit-broken, and retried — without touching your application code.
+An **open-source LLM reliability proxy** that sits between your agent and any provider. Every call is validity-scored, cost-tracked, circuit-broken, and retried — without touching your application code.
 
 | | |
 |---|---|
