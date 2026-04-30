@@ -37,7 +37,7 @@
 </p>
 
 <p align="center">
-  I work at the intersection of <strong>LLM evaluation</strong>, <strong>agent systems</strong>, and <strong>statistically rigorous AI</strong><br/>
+  I work at the intersection of <strong>LLM evaluation</strong>, <strong>agent systems</strong>, and <strong>production AI infrastructure</strong><br/>
   Data Science is my foundation — statistical rigor is the differentiator.
 </p>
 
@@ -57,12 +57,12 @@ An open-source benchmark that evaluates whether LLM agents perform **statistical
 
 | | |
 |---|---|
-| 🧪 Tasks | 23 across 5 categories |
-| 🤖 Models | 10 frontier models — GPT-5, Claude, Gemini, Llama, Grok |
-| 📊 Runs | 163 with full cost tracking |
+| 🧪 Tasks | **39** across 5 categories |
+| 🤖 Models | **12** frontier models — GPT-4.1, Claude Sonnet 4.6, Gemini 2.5 Flash, Llama 3.3, Grok-3 mini |
+| 📊 Runs | **1,180+** with full cost tracking |
 | 📐 Scoring | Correctness · Code Quality · Efficiency · Stat Validity |
 
-**Key finding:** Every frontier model including GPT-5 scores ≤**0.25** on statistical validity on tasks where it scores **0.83–1.00** on correctness.
+**Key finding:** Every frontier model scores ≤**0.25** on statistical validity on tasks where it scores **0.83–1.00** on correctness.
 
 > Correct output ≠ sound reasoning.
 
@@ -90,6 +90,54 @@ pip install -e ".[dev]"
 dab run eda_001 --model gpt-4.1 --budget 0.02
 dab score outputs/eda_001_*.json
 # → score breakdown · token usage · statistical validity gaps
+```
+
+---
+
+## 🛡️ Production Project — CostGuard
+
+<table>
+<tr>
+<td width="58%">
+
+### [CostGuard](https://github.com/patibandlavenkatamanideep/CostGuard)
+
+A **production-grade LLM reliability proxy** that sits between your agent and any provider. Every call is validity-scored, cost-tracked, circuit-broken, and retried — without touching your application code.
+
+| | |
+|---|---|
+| 🔁 Retry | Exponential backoff for 429/503 (tenacity, 3 attempts, 1–8s) |
+| ⚡ Circuit breakers | CLOSED/OPEN/HALF\_OPEN per provider, state persists across restarts |
+| 📊 Observability | Prometheus metrics + Grafana dashboard, 13 metrics |
+| 🔔 Alerts | 6 types — Slack + webhook, cooldown-managed |
+| 🧪 Tests | 73 unit tests (CB, retry, persistence, scoring, middleware) |
+| 🌐 Deploy | One-click Render · Fly.io · Koyeb · Docker Compose |
+
+Validity scoring is RDAB-calibrated. Full RDAB evaluation via `POST /evaluate`.
+
+</td>
+<td width="42%" align="center">
+
+<a href="https://github.com/patibandlavenkatamanideep/CostGuard" target="_blank">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=patibandlavenkatamanideep&repo=CostGuard&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=3B82F6&text_color=94A3B8&icon_color=06B6D4" />
+</a>
+
+</td>
+</tr>
+</table>
+
+```python
+# Drop-in proxy — works with LangGraph, CrewAI, or any agent
+import httpx
+resp = httpx.post("https://your-costguard.onrender.com/proxy", json={
+    "model_id":         "gpt-4.1",
+    "prompt":           "Analyze this dataset...",
+    "fallback_models":  ["claude-sonnet-4-6", "gemini-2.5-flash"],
+    "reject_threshold": 0.30,
+})
+print(resp.json()["content"])               # validated LLM response
+print(resp.json()["cost_usd"])              # exact cost to 8 decimal places
+print(resp.json()["circuit_breaker_state"]) # closed / open / half_open
 ```
 
 ---
@@ -122,12 +170,14 @@ dab score outputs/eda_001_*.json
   <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
 </p>
 
-<h4>Infrastructure & Tools</h4>
+<h4>Infrastructure & Observability</h4>
 <p>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" />
+  <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
 </p>
 
@@ -136,9 +186,9 @@ dab score outputs/eda_001_*.json
 ## 🎯 Currently Building
 
 ```
-▸ RealDataAgentBench  →  30+ tasks, human baselines, arXiv paper
-▸ LLM evaluation infra  →  surfaces how models reason, not just what they output
-▸ Open to roles in  →  LLM evaluation · agent systems · production AI infrastructure
+▸ RealDataAgentBench  →  39 tasks · 12 models · 1,180+ runs · arXiv paper in progress
+▸ CostGuard           →  production LLM proxy · 73 unit tests · deployed on Render/Fly.io
+▸ Open to roles in    →  LLM evaluation · agent reliability · production AI infrastructure
 ```
 
 ---
