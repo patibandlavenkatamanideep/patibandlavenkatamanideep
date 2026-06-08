@@ -1,237 +1,113 @@
-<!-- Header banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:3B82F6,100:06B6D4&height=200&section=header&text=Venkata%20Manideep%20Patibandla&fontSize=36&fontColor=FFFFFF&fontAlignY=38&desc=LLM%20Evaluation%20%C2%B7%20Agent%20Systems%20%C2%B7%20Production%20ML%20Engineering&descSize=16&descAlignY=58&animation=fadeIn" width="100%" />
+# Venkata Manideep Patibandla
 
-<!-- Social badges -->
-<p align="center">
-  <img src="https://img.shields.io/badge/Sacred%20Heart%20University-MS%20Computer%20Science-CC0000?style=for-the-badge&logo=academia&logoColor=white" />
-</p>
+**AI/ML Engineer · LLM Evaluation · Agentic AI Systems · Production AI Infrastructure**
 
-<p align="center">
-  <a href="https://venkatamanideep.com" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-venkatamanideep.com-0F172A?style=for-the-badge&logo=vercel&logoColor=white" />
-  </a>
-  &nbsp;
-  <a href="mailto:venkatamanideep20@gmail.com">
-    <img src="https://img.shields.io/badge/Email-venkatamanideep20@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  &nbsp;
-  <a href="https://linkedin.com/in/manideep-analytics" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  &nbsp;
-  <a href="https://patibandlavenkatamanideep.github.io/RealDataAgentBench/" target="_blank">
-    <img src="https://img.shields.io/badge/Live%20Leaderboard-RDAB-22C55E?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-</p>
+I build AI systems where correctness is not the only metric.
 
-<br/>
+My work focuses on:
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0F172A&height=3&section=header" width="100%" />
+* evaluating whether LLM agents reason correctly, not just whether they produce the right-looking answer
+* building safer agent systems with scoped tools, routing, guardrails, and human escalation
+* designing production AI infrastructure for reliability, cost control, and observability
 
-<h2 align="center">⚡ What I Build</h2>
-
-<p align="center">
-  <em>Most benchmarks ask: "did the model get the right answer?"</em><br/>
-  <em>I care about: "did it reason correctly, use appropriate methods, and report uncertainty?"</em><br/>
-  <strong>Those are different questions. They have different answers.</strong>
-</p>
-
-<p align="center">
-  I work at the intersection of <strong>LLM evaluation</strong>, <strong>agent systems</strong>, and <strong>production AI infrastructure</strong><br/>
-  Data Science is my foundation — statistical rigor is the differentiator.
-</p>
-
-<br/>
+Data science is my foundation. Statistical rigor is the differentiator.
 
 ---
 
-## 🚀 Featured Project — RealDataAgentBench
+## Featured Projects
 
-<table>
-<tr>
-<td width="58%">
+### RealDataAgentBench
 
-### [RealDataAgentBench (RDAB)](https://github.com/patibandlavenkatamanideep/RealDataAgentBench)
+**LLM agent benchmark for statistically sound data science.**
 
-An open-source benchmark that evaluates whether LLM agents perform **statistically sound** data science — not just correct-looking output.
+RealDataAgentBench evaluates whether LLM agents perform valid data science workflows, not just produce plausible outputs.
 
-| | |
-|---|---|
-| 🧪 Tasks | **39** across 5 categories |
-| 🤖 Models | **12** frontier models — GPT-4.1, Claude Sonnet 4.6, Gemini 2.5 Flash, Llama 3.3, Grok-3 mini |
-| 📊 Runs | **1,180+** with full cost tracking |
-| 📐 Scoring | Correctness · Code Quality · Efficiency · Stat Validity |
+* 39 tasks across 5 categories
+* 12 frontier/open models
+* 1,180+ benchmark runs
+* cost tracking across models
+* scoring for correctness, code quality, efficiency, and statistical validity
 
-**Key finding:** Every frontier model scores ≤**0.25** on statistical validity on tasks where it scores **0.83–1.00** on correctness.
+**Key lesson:** correct output does not always mean sound reasoning.
 
-> Correct output ≠ sound reasoning.
-
-</td>
-<td width="42%" align="center">
-
-<a href="https://patibandlavenkatamanideep.github.io/RealDataAgentBench/" target="_blank">
-  <img src="https://img.shields.io/badge/%F0%9F%9F%A2%20LIVE%20LEADERBOARD-Open%20Now-22C55E?style=for-the-badge" />
-</a>
-
-<br/><br/>
-
-<a href="https://github.com/patibandlavenkatamanideep/RealDataAgentBench" target="_blank">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=patibandlavenkatamanideep&repo=RealDataAgentBench&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=3B82F6&text_color=94A3B8&icon_color=06B6D4" />
-</a>
-
-</td>
-</tr>
-</table>
-
-```bash
-# Run in 60 seconds
-git clone https://github.com/patibandlavenkatamanideep/RealDataAgentBench
-pip install -e ".[dev]"
-dab run eda_001 --model gpt-4.1 --budget 0.02
-dab score outputs/eda_001_*.json
-# → score breakdown · token usage · statistical validity gaps
-```
+Repo: https://github.com/patibandlavenkatamanideep/RealDataAgentBench
 
 ---
 
-## 🛡️ Open-Source Project — CostGuard
+### RelayOps
 
-<table>
-<tr>
-<td width="58%">
+**Production-shaped AI customer-support agent for telecom/subscription support.**
 
-### [CostGuard](https://github.com/patibandlavenkatamanideep/CostGuard)
+RelayOps is an end-to-end vertical slice of a safer support agent:
 
-An **open-source LLM reliability proxy** that sits between your agent and any provider. Every call is validity-scored, cost-tracked, circuit-broken, and retried — without touching your application code.
+* deterministic access gate before model/tool execution
+* scoped account/device tools
+* tiered intent router
+* fine-tuned Qwen2.5-1.5B LoRA classifier
+* hybrid RAG with citations
+* guardrails for pricing, offers, and PII
+* human escalation for billing, unsafe, or low-confidence turns
+* adversarial route-safety evals
 
-| | |
-|---|---|
-| 🔁 Retry | Exponential backoff for 429/503 (tenacity, 3 attempts, 1–8s) |
-| ⚡ Circuit breakers | CLOSED/OPEN/HALF\_OPEN per provider, state persists across restarts |
-| 📊 Observability | Prometheus metrics + Grafana dashboard, 13 metrics |
-| 🔔 Alerts | 6 types — Slack + webhook, cooldown-managed |
-| 🧪 Tests | 73 unit tests (CB, retry, persistence, scoring, middleware) |
-| 🌐 Deploy | One-click Render · Fly.io · Koyeb · Docker Compose |
+**Key lesson:** for agents that can take actions, route safety matters more than raw answer accuracy.
 
-Validity scoring is RDAB-calibrated. Full RDAB evaluation via `POST /evaluate`.
-
-</td>
-<td width="42%" align="center">
-
-<a href="https://github.com/patibandlavenkatamanideep/CostGuard" target="_blank">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=patibandlavenkatamanideep&repo=CostGuard&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=3B82F6&text_color=94A3B8&icon_color=06B6D4" />
-</a>
-
-</td>
-</tr>
-</table>
-
-```python
-# Drop-in proxy — works with LangGraph, CrewAI, or any agent
-import httpx
-resp = httpx.post("https://your-costguard.onrender.com/proxy", json={
-    "model_id":         "gpt-4.1",
-    "prompt":           "Analyze this dataset...",
-    "fallback_models":  ["claude-sonnet-4-6", "gemini-2.5-flash"],
-    "reject_threshold": 0.30,
-})
-print(resp.json()["content"])               # validated LLM response
-print(resp.json()["cost_usd"])              # exact cost to 8 decimal places
-print(resp.json()["circuit_breaker_state"]) # closed / open / half_open
-```
+Repo: https://github.com/patibandlavenkatamanideep/relayops
+Live demo: https://relayops-production.up.railway.app
+HF adapter: https://huggingface.co/venkatamanideep/relayops-intent-qwen
 
 ---
 
-## 📡 Open-Source Project — RelayOps
+### CostGuard
 
-<table>
-<tr>
-<td width="58%">
+**LLM reliability and cost proxy for production AI systems.**
 
-### [RelayOps](https://github.com/patibandlavenkatamanideep/relayops)
+CostGuard sits between an application and LLM providers to track cost, validate responses, retry failures, and protect systems with circuit breakers.
 
-A **production-shaped AI customer-service agent** for telecom support — one honest end-to-end slice: a deterministic access gate, tiered intent router, scoped tools, hybrid RAG, and an independent guardrail. Billing, unsafe, and low-confidence turns escalate to a human.
+* provider-level circuit breakers
+* retry and fallback logic
+* cost tracking
+* response validation
+* Prometheus metrics
+* Grafana dashboard
+* alerting hooks
+* 70+ unit tests
 
-| | |
-|---|---|
-| 🔒 Safety by construction | Per-customer scope enforced **server-side**; recall-heavy guardrail blocks invented pricing |
-| 🧭 Tiered routing | keyword → Complement NB → calibrated NB → **Qwen2.5-1.5B LoRA** (published to Hugging Face) |
-| 📊 Route-safety evals | Adversarial set + cross-family LLM-judge, with honest synthetic-data caveats |
+**Key lesson:** production AI needs reliability controls around the model, not just better prompts.
 
-</td>
-<td width="42%" align="center">
-
-<a href="https://github.com/patibandlavenkatamanideep/relayops" target="_blank">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=patibandlavenkatamanideep&repo=relayops&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=3B82F6&text_color=94A3B8&icon_color=06B6D4" />
-</a>
-
-<br/><br/>
-
-<a href="https://relayops-production.up.railway.app" target="_blank">Live demo ↗</a>
-
-</td>
-</tr>
-</table>
+Repo: https://github.com/patibandlavenkatamanideep/CostGuard
 
 ---
 
-## 🛠️ Tech Stack
+## Technical Focus
 
-<h4>Languages</h4>
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" />
-</p>
+**LLM Evaluation**
+Agent benchmarks · statistical validity · adversarial evals · route-safety metrics · LLM-as-judge · cost-aware evaluation
 
-<h4>LLM / AI / GenAI</h4>
-<p>
-  <img src="https://img.shields.io/badge/Anthropic_Claude-0F172A?style=for-the-badge&logo=anthropic&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenAI_API-412991?style=for-the-badge&logo=openai&logoColor=white" />
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
-  <img src="https://img.shields.io/badge/RAG_Pipelines-06B6D4?style=for-the-badge&logo=databricks&logoColor=white" />
-  <img src="https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logoColor=white" />
-</p>
+**Agentic AI Systems**
+Tool-use agents · RAG · intent routing · scoped tools · deterministic policy gates · guardrails · human escalation
 
-<h4>ML / Data Science</h4>
-<p>
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" />
-  <img src="https://img.shields.io/badge/XGBoost-189AD3?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
-</p>
+**Production AI Infrastructure**
+FastAPI · Streamlit · Docker · Railway · CI/CD · observability · retries · circuit breakers · model/provider abstraction
 
-<h4>Infrastructure & Observability</h4>
-<p>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
-  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" />
-  <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-</p>
+**Machine Learning**
+Python · SQL · scikit-learn · PyTorch · LoRA fine-tuning · Unsloth · Qwen · Llama · OpenAI · Claude · Gemini
 
 ---
 
-## 🎯 Currently Building
+## What I’m Building Toward
 
-```
-▸ RealDataAgentBench  →  39 tasks · 12 models · 1,180+ runs · arXiv paper in progress
-▸ CostGuard           →  production LLM proxy · 73 unit tests · deployed on Render/Fly.io
-▸ RelayOps            →  telecom support agent · scoped tools · route-safety evals · live demo
-▸ Open to roles in    →  LLM evaluation · agent reliability · production AI infrastructure
-```
+I’m interested in AI systems that are useful beyond demos:
+
+* agents that know when not to act
+* evals that measure reasoning quality, not just final answers
+* routing systems that optimize for safety, reliability, and cost
+* RAG systems with citations and groundedness checks
+* infrastructure that makes model behavior observable and controllable
 
 ---
 
-<p align="center">
-  <a href="https://venkatamanideep.com" target="_blank">
-    <img src="https://img.shields.io/badge/View%20Full%20Portfolio%20%E2%86%97-venkatamanideep.com-3B82F6?style=for-the-badge&logo=vercel&logoColor=white" />
-  </a>
-</p>
+## Contact
 
-<!-- Footer banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,50:3B82F6,100:0F172A&height=120&section=footer&animation=fadeIn" width="100%" />
+GitHub: https://github.com/patibandlavenkatamanideep
+LinkedIn: https://www.linkedin.com/in/patibandlavenkatamanideep
+Email: [pvmanideep.analytics@gmail.com](mailto:pvmanideep.analytics@gmail.com)
