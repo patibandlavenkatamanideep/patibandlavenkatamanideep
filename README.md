@@ -1,6 +1,6 @@
 # Venkata Manideep Patibandla
 
-**AI/ML Engineer · LLM Evaluation · Agentic AI Systems · Production AI Infrastructure**
+**AI/ML Engineer · Forward Deployed Engineer · LLM Evaluation · Agentic AI Systems · Production AI Infrastructure**
 
 I build AI systems where correctness is not the only metric.
 
