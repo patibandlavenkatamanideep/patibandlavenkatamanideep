@@ -142,6 +142,39 @@ print(resp.json()["circuit_breaker_state"]) # closed / open / half_open
 
 ---
 
+## 📡 Open-Source Project — RelayOps
+
+<table>
+<tr>
+<td width="58%">
+
+### [RelayOps](https://github.com/patibandlavenkatamanideep/relayops)
+
+A **production-shaped AI customer-service agent** for telecom support — one honest end-to-end slice: a deterministic access gate, tiered intent router, scoped tools, hybrid RAG, and an independent guardrail. Billing, unsafe, and low-confidence turns escalate to a human.
+
+| | |
+|---|---|
+| 🔒 Safety by construction | Per-customer scope enforced **server-side**; recall-heavy guardrail blocks invented pricing |
+| 🧭 Tiered routing | keyword → Complement NB → calibrated NB → **Qwen2.5-1.5B LoRA** (published to Hugging Face) |
+| 📊 Route-safety evals | Adversarial set + cross-family LLM-judge, with honest synthetic-data caveats |
+
+</td>
+<td width="42%" align="center">
+
+<a href="https://github.com/patibandlavenkatamanideep/relayops" target="_blank">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=patibandlavenkatamanideep&repo=relayops&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=3B82F6&text_color=94A3B8&icon_color=06B6D4" />
+</a>
+
+<br/><br/>
+
+<a href="https://relayops-production.up.railway.app" target="_blank">Live demo ↗</a>
+
+</td>
+</tr>
+</table>
+
+---
+
 ## 🛠️ Tech Stack
 
 <h4>Languages</h4>
@@ -188,6 +221,7 @@ print(resp.json()["circuit_breaker_state"]) # closed / open / half_open
 ```
 ▸ RealDataAgentBench  →  39 tasks · 12 models · 1,180+ runs · arXiv paper in progress
 ▸ CostGuard           →  production LLM proxy · 73 unit tests · deployed on Render/Fly.io
+▸ RelayOps            →  telecom support agent · scoped tools · route-safety evals · live demo
 ▸ Open to roles in    →  LLM evaluation · agent reliability · production AI infrastructure
 ```
 
