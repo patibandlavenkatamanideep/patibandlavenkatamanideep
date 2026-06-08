@@ -148,5 +148,5 @@ LLM evaluation · statistical validity · adversarial evals · route-safety metr
 ## Connect
 
 GitHub: https://github.com/patibandlavenkatamanideep
-LinkedIn: https://www.linkedin.com/in/patibandlavenkatamanideep
+LinkedIn: https://www.linkedin.com/in/manideep-analytics/
 Email: [pvmanideep.analytics@gmail.com](mailto:pvmanideep.analytics@gmail.com)
