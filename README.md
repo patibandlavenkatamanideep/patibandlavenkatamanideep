@@ -44,7 +44,7 @@ RealDataAgentBench evaluates whether LLM agents can perform valid data science w
 
 * 39 tasks across 5 data-science categories
 * 12 frontier/open models
-* 1,180+ benchmark runs
+* 1,400+ benchmark runs
 * full cost tracking
 * scoring across correctness, code quality, efficiency, and statistical validity
 
