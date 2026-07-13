@@ -6,10 +6,10 @@ I build AI systems that go beyond demos — systems that can be evaluated, monit
 
 My current work sits around:
 
-* **LLM evaluation** — testing reasoning quality, statistical validity, and agent behavior
-* **Agentic AI systems** — scoped tools, routing, RAG, guardrails, and human escalation
-* **Production AI infrastructure** — reliability, cost control, observability, and deployment
-* **Data science foundations** — statistical rigor, modeling, and evaluation design
+* **LLM evaluation** - testing reasoning quality, statistical validity, and agent behavior
+* **Agentic AI systems** - scoped tools, routing, RAG, guardrails, and human escalation
+* **Production AI infrastructure** - reliability, cost control, observability, and deployment
+* **Data science foundations** - statistical rigor, modeling, and evaluation design
 
 I care about one question a lot:
 
