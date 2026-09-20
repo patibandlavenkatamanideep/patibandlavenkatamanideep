@@ -1,74 +1,54 @@
-# Hi, I'm Venkata Manideep 👋
+# Venkata Manideep Patibandla
 
-**AI/ML Engineer · Forward Deployed Engineer · LLM Evaluation · Agentic AI Systems · Production AI Infrastructure**
+**AI/ML Engineer — LLM evaluation, agent reliability, production AI infrastructure**
+New Haven, CT · [venkatamanideep.com](https://venkatamanideep.com/) · [LinkedIn](https://linkedin.com/in/manideep-analytics)
 
-I build AI systems that go beyond demos — systems that can be evaluated, monitored, routed safely, and trusted when they interact with tools or data.
+I work on one question:
 
-My current work sits around:
+> Did the system actually reason correctly, or did it just produce a right-looking answer?
 
-* **LLM evaluation** - testing reasoning quality, statistical validity, and agent behavior
-* **Agentic AI systems** - scoped tools, routing, RAG, guardrails, and human escalation
-* **Production AI infrastructure** - reliability, cost control, observability, and deployment
-* **Data science foundations** - statistical rigor, modeling, and evaluation design
+Most of what I build is infrastructure for answering that honestly — evals that measure
+repeatability rather than a single score, agents with scoped tools and audit trails, and
+benchmarks that admit their own limits.
 
-I care about one question a lot:
+## What I'm building
 
-> Did the system only produce the right-looking answer, or did it actually reason correctly and make a safe decision?
+| Project | What it does |
+|---|---|
+| **[evalseal](https://github.com/patibandlavenkatamanideep/evalseal)** · `pip install evalseal` | Reproducibility receipts for LLM evals. Runs an eval N times, reports per-case flip rates with confidence intervals, and seals the result — including the judge prompt, rubric and model — into a hash-linked, Ed25519-signed ledger. |
+| **[memoryops-ai](https://github.com/patibandlavenkatamanideep/memoryops-ai)** | Governed memory runtime for AI assistants: policy-before-storage, context admission, deletion proofs, leakage evals. |
+| **[RealDataAgentBench](https://github.com/patibandlavenkatamanideep/RealDataAgentBench)** | Benchmark for LLM data-science agents, scoring correctness, code quality, efficiency and statistical validity. 500 recorded runs across 14 models. |
+| **[relayops](https://github.com/patibandlavenkatamanideep/relayops)** | Control plane for AI support agents: scoped routing, policy broker, approval queue, replay verification, human handoff. |
+| **[trust-rag-finance](https://github.com/patibandlavenkatamanideep/trust-rag-finance)** | Financial RAG assistant with hybrid retrieval, citations, groundedness checks and audit logging. |
+| **[CostGuard](https://github.com/patibandlavenkatamanideep/CostGuard)** · **[Tether](https://github.com/patibandlavenkatamanideep/Tether)** | LLM cost/reliability proxy with circuit breakers and provider fallback; durable execution with checkpoint and resume for long-running agents. |
 
----
+## Things this work has actually shown
 
-## What I'm Building
+Not claims — measurements from the repos above, reproducible from committed recordings.
 
-Right now, I’m focused on building and evaluating AI agents that are safer, cheaper, and more reliable in production settings.
+**The grader is often the unstable part, not the model.** Running the same eval five times:
+an LLM-judged suite flipped the verdict on 5 of 20 cases, while the same model on
+numerically-graded questions flipped 0 of 40. A single run reports one of those outcomes
+and tells you nothing about which.
 
-Some themes I keep coming back to:
+**A benchmark can rot without anyone touching it.** Auditing my own leaderboard: 24% of 500
+recorded runs could no longer be reproduced — a provider had retired a model family, and an
+SDK had removed a parameter the harness still sent. Nothing in the harness noticed, so the
+leaderboard kept rendering those rows as if they still meant something.
 
-* agents that know when **not** to act
-* evals that measure **reasoning**, not just final answers
-* routing systems that optimize for **safety, reliability, and cost**
-* RAG systems with **citations and groundedness checks**
-* model/provider abstraction so systems are not locked to one LLM
-* guardrails that are tested with adversarial cases, not just described in docs
+**Most "model failures" I chase turn out to be eval defects.** Unanswerable questions,
+ambiguous wording, and a scorer that counted markdown backticks as a wrong answer — each
+looked like model instability until the runs were repeated and inspected.
 
----
+## Stack
 
-## About Me
+**Languages & ML** Python · SQL · PyTorch · scikit-learn · pandas · NumPy · SciPy
+**LLMs & agents** OpenAI · Anthropic · Gemini · Llama · LangChain · LangGraph · RAG · LoRA
+**Infrastructure** FastAPI · Docker · GitHub Actions · Postgres · Streamlit · Railway
+**Evaluation** statistical validity · adversarial evals · cost tracking · observability · provenance
 
-I’m a Computer Science graduate student with a strong foundation in **data science, machine learning, and AI systems**.
+## Contact
 
-My background started with statistical ML and data analysis, but over time I became more interested in a harder question:
-
-> How do we make AI systems reliable when they are connected to tools, data, users, and real-world decisions?
-
-That question led me toward LLM evals, agent safety, RAG reliability, model routing, and production AI infrastructure.
-
-I enjoy building projects that combine:
-
-* applied ML
-* backend systems
-* evaluation frameworks
-* LLM/agent workflows
-* deployment and observability
-* honest documentation of limitations
-
----
-
-## Tech Stack
-
-**Languages & ML**
-Python · SQL · scikit-learn · PyTorch · NumPy · Pandas · SciPy
-
-**LLMs & Agents**
-OpenAI · Claude · Gemini · Qwen · Llama · LangChain · LangGraph · RAG · LoRA · Unsloth
-
-**Backend & Infrastructure**
-FastAPI · Streamlit · Docker · Railway · GitHub Actions · REST APIs
-
-**Data & Evaluation**
-LLM evaluation · statistical validity · adversarial evals · route-safety metrics · cost tracking · observability
-
----
-
-## Connect
-
-[GitHub](https://github.com/patibandlavenkatamanideep) [LinkedIn](https://www.linkedin.com/in/manideep-analytics/) Email: [pvmanideep.analytics@gmail.com](mailto:pvmanideep.analytics@gmail.com)
+[pvmanideep.analytics@gmail.com](mailto:pvmanideep.analytics@gmail.com) ·
+[LinkedIn](https://linkedin.com/in/manideep-analytics) ·
+[dev.to](https://dev.to/manideep_patibandla)
